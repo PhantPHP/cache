@@ -20,10 +20,23 @@ Phant Cache implement the PSR-16 SimpleCache interface :
 
 #### File
 
+Store cache in file.
+
 ```php
 use Phant\Cache\File as CacheFile;
 
 $cache = new CacheFile('path/cache/', 'my-cache-container', CacheFile::TTL_HOUR);
+```
+
+
+#### Runtime
+
+Store cache in runtime memory.
+
+```php
+use Phant\Cache\Runtime as CacheRuntime;
+
+$cache = new CacheRuntime();
 ```
 
 
