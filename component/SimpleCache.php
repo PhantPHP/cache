@@ -30,7 +30,7 @@ final class SimpleCache implements CacheInterface
 
 	public function get(string $key, mixed $default = null): mixed
 	{
-		return $this->filesystemAdapter->getItem($key)->get();
+		return $this->filesystemAdapter->getItem($key)->get() ?? $default;
 	}
 
 	public function set(string $key, mixed $value, \DateInterval|int|null $ttl = null): bool
@@ -72,7 +72,7 @@ final class SimpleCache implements CacheInterface
 	public function getMultiple(iterable $keys, mixed $default = null): iterable
 	{
 		foreach ($keys as $key) {
-			yield $this->get($key);
+			yield $this->get($key, $default);
 		}
 	}
 	
