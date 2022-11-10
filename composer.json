@@ -2,7 +2,7 @@
     "name": "phant/cache",
     "description": "Manage cache easily",
     "license": "MIT",
-    "keywords": ["cache manager", "cache component", "SimpleCache", "cache PSR-16", "cache component PSR-16"],
+    "keywords": ["cache manager", "cache component", "file cache", "SimpleCache", "cache PSR-16", "cache component PSR-16"],
     "authors": [
         {
             "name": "Lenny ROUANET",
@@ -10,12 +10,12 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": ">=8.1",
         "symfony/cache": "5.*",
-        "psr/simple-cache": "^3.0"
+        "psr/simple-cache": "3.*"
     },
     "require-dev": {
-        "phpstan/phpstan": "^1.4"
+        "phpstan/phpstan": "1.*"
     },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse component --memory-limit=4G"
