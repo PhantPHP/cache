@@ -6,7 +6,7 @@ namespace Phant\Cache;
 
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
-final class File extends \Phant\Cache\Base
+class File extends \Phant\Cache\Base
 {
     protected readonly FilesystemAdapter $filesystemAdapter;
 
