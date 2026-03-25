@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Phant\Cache;
 
-final class Runtime extends \Phant\Cache\Base
+class Runtime extends \Phant\Cache\Base
 {
     private array $store;
 
